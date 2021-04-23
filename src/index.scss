@@ -1,0 +1,54 @@
+$back-col: #0E0E10;
+body {
+  background-color: $back-col;
+
+}
+
+.App{
+  overflow: hidden;
+}
+
+footer{
+  background-color: #140508;
+}
+
+.loading{
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loader{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #140508;
+    border-top: 3px solid #F2B705;
+    animation: loaderAnim 1s linear;
+  }
+}
+
+@keyframes loaderAnim{
+  0%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #ffff;
+  border-radius: 10px;
+  border: 3px solid #111;
+}
+
+::-webkit-scrollbar-track{
+  background: #111;
+}
+
+

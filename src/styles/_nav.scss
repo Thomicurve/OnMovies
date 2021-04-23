@@ -1,0 +1,40 @@
+$red: #8C1127;
+$yellow: #F2B705;
+nav{
+    background-color: $red;
+}
+
+
+
+
+.nav-title{
+    letter-spacing: 1px;
+}
+
+.button-menu{
+    font-size: 30px;
+    color: #fff;
+    display: none;
+}
+.button-menu:hover{
+    cursor: pointer;
+}
+
+.form-search{
+    margin-right: 30px;
+    input[type="search"]{
+        width: 340px;
+    }
+    transition: all 1s ease;
+}
+
+@media screen and (max-width:1050px) {
+    .form-search{
+        margin-right: 0px;
+        input[type="search"]{
+            width: 240px;
+        }
+    }
+}
+
+

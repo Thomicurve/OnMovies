@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+$font-poppins: 'Poppins', sans-serif;
+$jetbrains:'JetBrains Mono', monospace;
+$dark-red: #140508;
+
+
+.movies-container{
+    margin: 40px 0px;
+    height: fit-content;
+}
+
+.movies-list-container{
+    height: fit-content;
+    padding-bottom: 35px;
+}
+
+.movies-list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    margin: 40px 0px;
+}
+
+.card-movie{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+
+    border-radius: 20px;
+    position: relative;
+    z-index: 20;
+    overflow: hidden;
+    height: 600px;
+    width: 350px;
+    box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.6);
+    img{
+        position: absolute;
+        top: -50px;
+        left: -60px;
+        width: 450px;
+        z-index: -1;
+        filter: brightness(0.3);
+    }
+}
+
+.text-movie{
+    font-family: $font-poppins;
+    
+    .text-warning{
+        width: 220px;
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 5px 0px;
+        white-space: nowrap;
+        
+        text-transform: uppercase;
+    }
+    
+}
+
+.movie-content{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 15px;
+
+    .eye-icon{
+        font-size: 26px;
+        background-color: #8C1127;
+        padding: 5px;
+        height: 46px;
+        width: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        transition: background .5s ease;
+    }
+    .eye-icon:hover{
+        cursor: pointer;
+        background-color: #690d1e;
+    }
+}
+
+
+
+
+.movies-list-container{
+    background-color: #111114;
+    margin: 80px 0px;
+    h4{
+        transform: translateY(-20px);
+        font-family: $jetbrains;
+        font-weight: 400;
+        letter-spacing: 7px;
+        background-color: $dark-red;
+        border-radius: 20px;
+        width: fit-content;
+        margin: 0px auto;
+        padding: 10px 40px;
+    }
+}
+
+
+@media screen and (max-width:650px) {
+    .button-menu{
+        display: block;
+    }
+    .form-search{
+        background-color: #222229;
+        justify-content: center;
+        padding: 15px 0px;
+        width: 100%;
+        left: 650px;
+        top: 56px;
+        position: absolute;
+        z-index: 20;
+    }
+    .form-search-activate{
+        left: 0px;
+    }
+    .card-movie{
+        height: 550px;
+        width: 300px;
+        .movie-title{
+            font-size: 16px;
+            width: 150px;
+        }
+    }
+    .icon-eye{
+        font-size: 20px;
+    }
+}
